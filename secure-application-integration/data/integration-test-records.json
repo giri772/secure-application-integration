@@ -1,0 +1,20 @@
+{
+  "description": "Example scenarios for the application flow; these records are documentation and are not loaded as live applications.",
+  "scenarios": [
+    { "name": "Load internships", "method": "GET", "path": "/api/internships", "expectedStatus": 200, "expectedResult": "JSON object with items array and total count." },
+    { "name": "Search internships", "method": "GET", "path": "/api/internships?search=remote", "expectedStatus": 200, "expectedResult": "Only matching internships are returned." },
+    { "name": "Filter by category", "method": "GET", "path": "/api/internships?type=Design", "expectedStatus": 200, "expectedResult": "Only design internships are returned." },
+    { "name": "Reject invalid category", "method": "GET", "path": "/api/internships?type=Unknown", "expectedStatus": 400, "expectedResult": "An explanatory JSON error." },
+    { "name": "Reject malformed application", "method": "POST", "path": "/api/applications", "expectedStatus": 422, "expectedResult": "Per-field validation messages; no application stored." },
+    { "name": "Accept valid application", "method": "POST", "path": "/api/applications", "expectedStatus": 201, "expectedResult": "Confirmation with generated application ID and received status." },
+    { "name": "Rate limiting", "method": "GET", "path": "/api/internships", "expectedStatus": 429, "expectedResult": "Retry-After header and friendly JSON error after request limit." },
+    { "name": "Not found", "method": "GET", "path": "/api/not-a-route", "expectedStatus": 404, "expectedResult": "Consistent JSON error." }
+  ],
+  "validApplicationExample": {
+    "internshipId": "int-101",
+    "fullName": "Taylor Example",
+    "email": "taylor@example.com",
+    "education": "B.Sc. Computer Science, Year 2",
+    "coverLetter": "I enjoy building useful interfaces and would like to learn how a product team works."
+  }
+}

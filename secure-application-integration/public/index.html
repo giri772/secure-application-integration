@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fc">
+  <meta name="description" content="Find a thoughtful first step. Browse internships and apply in a few minutes.">
+  <title>Firstlight — Your next step starts here</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#opportunities">Skip to opportunities</a>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Firstlight home"><span class="brand-mark" aria-hidden="true">✳</span> firstlight</a>
+    <nav aria-label="Main navigation"><a href="#opportunities">Explore</a><a href="#how-it-works">How it works</a><a class="nav-apply" href="#opportunities">Find your next step <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow"><span class="live-dot"></span> A little experience goes a long way</p><h1 id="hero-title">Your next step<br>starts <span>here.</span></h1><p class="hero-intro">Good work begins with a first chance. Find an internship where you can learn, contribute, and figure out what you love doing.</p><a class="button button-dark" href="#opportunities">Explore opportunities <span aria-hidden="true">↓</span></a><div class="hero-note"><div class="avatar-stack" aria-hidden="true"><span>J</span><span>M</span><span>A</span></div><span>For curious minds at every starting point</span></div></div>
+      <div class="hero-art" aria-label="Illustration of a winding path to new opportunities" role="img"><div class="art-sun"></div><div class="art-circle circle-one"></div><div class="art-circle circle-two"></div><svg class="art-path" viewBox="0 0 500 420" aria-hidden="true"><path d="M25 365 C95 346 95 295 165 292 C230 288 233 235 280 224 C335 211 320 154 386 145 C435 137 444 101 468 58" fill="none" stroke="#fae5d1" stroke-width="63" stroke-linecap="round"/><path d="M25 365 C95 346 95 295 165 292 C230 288 233 235 280 224 C335 211 320 154 386 145 C435 137 444 101 468 58" fill="none" stroke="#fffaf5" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 13"/></svg><div class="art-label label-top"><span>01</span> Start where you are</div><div class="art-label label-bottom"><span>✦</span> See what grows</div><div class="art-sparkle" aria-hidden="true">✦</div><div class="art-plant" aria-hidden="true"><i></i><b></b><span></span></div><div class="art-caption">There’s room to grow.</div></div>
+      <div class="hero-bottom"><span>MADE FOR YOUR FIRST YES</span><span>GOOD PEOPLE. REAL PROJECTS. ROOM TO GROW.</span><span>SCROLL TO EXPLORE ↓</span></div>
+    </section>
+    <section id="how-it-works" class="intro-strip"><span class="section-kicker">A BETTER WAY TO BEGIN</span><p>Not sure where to start? That’s okay.<br><strong>Start with what makes you curious.</strong></p><span class="strip-decoration" aria-hidden="true">✳</span></section>
+    <section id="opportunities" class="opportunities" aria-labelledby="opportunities-title">
+      <div class="section-heading"><div><p class="eyebrow">YOUR NEXT CHAPTER</p><h2 id="opportunities-title">Find your kind<br>of opportunity.</h2></div><p class="heading-aside">Small teams. Real projects.<br>A chance to make it your own.</p></div>
+      <div class="filters"><label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Search internships</span><input id="search" type="search" placeholder="Try “design”, “remote”…" autocomplete="off"><kbd>⌕</kbd></label><label class="filter-label"><span class="sr-only">Filter by field</span><select id="type-filter"><option value="">All fields</option><option>Engineering</option><option>Data</option><option>Design</option><option>Marketing</option><option>Operations</option></select></label><span id="result-count" class="result-count" aria-live="polite"></span></div>
+      <div id="status" class="status" role="status" aria-live="polite">Loading opportunities…</div><div id="job-grid" class="job-grid" aria-busy="true"></div>
+    </section>
+    <section class="quote-band"><span class="quote-star" aria-hidden="true">✳</span><blockquote>“You don’t need to have<br>it all figured out <em>to begin.”</em></blockquote><p>Just bring your point of view.</p></section>
+    <section class="closing"><div><p class="eyebrow">A SMALL STEP IS STILL A STEP</p><h2>Curiosity looks<br>good on you.</h2></div><a class="button button-light" href="#opportunities">See what’s out there <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">✳</span> firstlight</a><span>For the things you haven’t tried yet.</span><span>© 2026 Firstlight Internship Board</span></footer>
+  <dialog id="apply-dialog" aria-labelledby="dialog-title"><div class="dialog-head"><div><p class="eyebrow">YOUR FIRST HELLO</p><h2 id="dialog-title">Let’s make it official.</h2><p id="selected-role" class="selected-role"></p></div><button type="button" class="icon-button" id="close-dialog" aria-label="Close application form">×</button></div><form id="application-form" novalidate><input type="hidden" name="internshipId"><label>Full name<input name="fullName" required minlength="2" maxlength="80" autocomplete="name" placeholder="Your name"><span class="field-error" data-error="fullName"></span></label><label>Email address<input name="email" type="email" required maxlength="254" autocomplete="email" placeholder="you@example.com"><span class="field-error" data-error="email"></span></label><label>School or current course<input name="education" required minlength="2" maxlength="120" autocomplete="organization-title" placeholder="e.g. B.Sc. Computer Science, Year 2"><span class="field-error" data-error="education"></span></label><label>A little about why you’re interested<textarea name="coverLetter" required minlength="30" maxlength="2000" rows="4" placeholder="What caught your eye? What would you like to learn?"></textarea><span class="field-error" data-error="coverLetter"></span><span class="hint"><span id="letter-count">0</span>/2,000 · At least 30 characters</span></label><p class="privacy-note">Your details are used to process this demo application. Please don’t include sensitive personal information.</p><div id="form-status" class="form-status" role="status" aria-live="polite"></div><button class="button button-dark submit-button" type="submit">Send my application <span aria-hidden="true">↗</span></button></form></dialog>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "secure-application-integration",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Beginner-friendly internship application board with a secure Node API and accessible frontend.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test",
+    "check": "node --check server.js && node --check public/app.js && node --test"
+  },
+  "engines": { "node": ">=20" }
+}
